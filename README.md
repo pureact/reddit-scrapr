@@ -1,6 +1,11 @@
 # Reddit Scrapr
 A dashboard with functionality to create new configurations to scrape reddit.
 
+## Pip Dependencies
+
+- praw
+- flask
+
 ## Screenshots
 
 ![Scrapr Home Page](./screenshots/scrapr_home_page.png)
