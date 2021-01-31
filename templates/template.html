@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for("static", filename="styles.css") }}">
+    </head>
+    <body>
+        <h1>Reddit Scrapr</h1>
+	<div class="topnav">
+	  <a href="/">Home</a>
+	  <a href="/reddit/create">Create Reddit Scrapr</a>
+	  <a href="/praw/create">Create PRAW Config</a>
+	</div>
+	<div>
+	{% block content %}{% endblock %}
+	</div>
+    </body>
+</html>

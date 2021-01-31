@@ -1,0 +1,18 @@
+{% extends "template.html" %}
+{% block content %}
+<form action="/reddit/create" method="POST">
+	<p>Config Name:</p>
+	<input type="text" id="configName" name="configName" value=""><br>
+	<p>Subreddit:</p>
+	<input type="text" id="subreddit" name="subreddit" value=""><br>
+	<p>Limit:</p>
+	<input type="text" id="limit" name="limit" value=""><br>
+	<p>Sorting:</p>
+	<input type="text" id="sorting" name="sorting" value=""><br>
+	<p>Keywords (comma separated):</p>
+	<input type="text" id="keywords" name="keywords" value=""><br>
+	<p>Tracked Users (comma separated):</p>
+	<input type="text" id="trackedUsers" name="trackedUsers" value=""><br><br>
+	<input type="submit" value="Submit">
+</form> 
+{% endblock %}

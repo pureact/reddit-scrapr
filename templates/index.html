@@ -1,0 +1,14 @@
+{% extends "template.html" %}
+{% block content %}
+<ul>
+<h2>Reddit Configs</h2>
+{% for scrapr in scraprs %}
+<li><a href="/reddit/{{ scrapr.name }}">{{ scrapr.name }}</a> // <a href="/reddit/{{ scrapr.name }}/delete">delete</a></li>
+{% endfor %}
+<h2>Praw Configs</h2>
+{% for praw in praws %}
+    <li>{{ praw.name }}</a> // <a href="/praw/{{ praw.name }}/delete">delete</a></li>
+{% endfor %}
+</ul>
+{% endblock %}
+

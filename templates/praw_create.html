@@ -1,0 +1,14 @@
+{% extends "template.html" %}
+{% block content %}
+<form action="/praw/create" method="POST">
+	<p>Config Name:</p>
+	<input type="text" id="configName" name="configName" value=""><br>
+	<p>Client ID:</p>
+	<input type="text" id="clientId" name="clientId" value=""><br>
+	<p>Client Secret:</p>
+	<input type="text" id="clientSecret" name="clientSecret" value=""><br>
+	<p>User Agent:</p>
+	<input type="text" id="userAgent" name="userAgent" value=""><br>
+	<input type="submit" value="Submit">
+</form> 
+{% endblock %}

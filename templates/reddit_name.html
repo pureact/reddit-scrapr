@@ -1,0 +1,29 @@
+{% extends "template.html" %}
+{% block content %}
+        <h1>{{ name }}</h1>
+        <h2>Run The Scrapr</h2>
+        <form action="/reddit/{{ name }}/run" method="POST">
+            <p>Praw Config:</p>
+            <select name="prawConfig" id="prawConfig">
+            {% for praw_config in praw_configs %}
+                <option value="{{ praw_config.name }}">{{ praw_config.name }}</option>
+            {% endfor %}
+            </select>
+            <input type="submit" value="Run">
+        </form> 
+        <h2>Links Scraped ({{ num_links }})</h2>
+        <table>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Permalink</th>
+            </tr>
+        {% for link in links %}
+            <tr>
+                <td>{{ link.title }}</td>
+                <td>{{ link.author }}</td>
+                <td>{{ link.permalink }}</td>
+            </tr>
+        {% endfor %}
+        </table>
+{% endblock %}
